@@ -610,7 +610,7 @@ div.checkout {
 .range_shipping {
     margin-bottom: 22px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     font-family: 'Arial', sans-serif;
     padding: 0 10px;
@@ -662,13 +662,58 @@ div.checkout {
     left: 0;
     height: 100%;
     background: #C23D31;
+    transition: all 0.3s ease;
 }
 .popup .range_shipping_right {
     width: calc(100% - 235px)!important;
 }
 .popup .range_shipping {
-    padding: 12px 0 0 0;
+    padding: 12px 0 4px 0;
     margin-bottom: 0;
+}
+.popup .range_shipping_left h2 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #171717;
+}
+.popup .range_shipping_left p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #666666;
+    margin-top: 4px;
+}
+.shipping_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #666666;
+    border-radius: 4px;
+    padding: 16px;
+    width: 252px;
+    margin: 0 auto 20px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+.shipping_box img {
+    width: 35px;
+    height: 26px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+.shipping_box_title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #C23D31;
+    margin: 0;
+}
+.shipping_box_text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #666666;
+    margin: 0;
 }
 /*media*/
 @media only screen and (max-width: 479px) {
