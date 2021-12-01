@@ -26,8 +26,13 @@ let sliderCategories = tns({
     }
 });
 
+let yourOrder =  document.querySelectorAll('.your_order'),
+    range = document.querySelectorAll('.range span'),
+    leftFor = document.querySelectorAll('.left_for'),
+    leftForPrice = document.querySelectorAll('.left_for span');
+
 //total sum products
-function sumTotalPrice() {
+function calcSumShipping() {
     let sum = 0;
     document.querySelectorAll('.total-price b').forEach((totalPrice) => {
         sum += parseFloat(totalPrice.innerHTML);
@@ -35,8 +40,27 @@ function sumTotalPrice() {
             totalValues.innerHTML = `$ ${sum.toFixed(2)}`;
         });
     });
+    for (var i = 0; i < yourOrder.length; i++) {
+        yourOrder[i].innerHTML = `<span>Your Order: </span> ${sum.toFixed(2)}`;
+        range[i].style.width = sum * 100 / 150 + '%';
+        leftForPrice[i].innerHTML = `$${(150 - sum).toFixed(2)}`
+        if (sum < 150 && sum >= 130) {
+            leftFor[i].innerHTML = `<span>$${(150 - sum).toFixed(2)} </span>  only left for free delivery`;
+            document.querySelector('.popup .range_shipping_left h2').innerHTML = `Get Free Delivery`;
+            document.querySelector('.popup .range_shipping_left p').innerHTML = `Add more products to your order`; 
+        } else if (sum >= 150) {
+            leftFor[0].innerHTML = `You Have Free Shipping`;
+            leftFor[1].innerHTML = ``;
+            document.querySelector('.popup .range_shipping_left h2').innerHTML = `You Have Free Shipping`;
+            document.querySelector('.popup .range_shipping_left p').innerHTML = ``; 
+        } else {
+            document.querySelector('.popup .range_shipping_left h2').innerHTML = `Get Free Delivery`;
+            document.querySelector('.popup .range_shipping_left p').innerHTML = `Add more products to your order`; 
+            leftFor[i].innerHTML = `<span>$${(150 - sum).toFixed(2)} </span>  left for free delivery`;
+        }
+    }
 }
-sumTotalPrice();
+calcSumShipping();
 
 //change quantity
 function quantityFun(el) {
@@ -54,7 +78,7 @@ function quantityFun(el) {
             el.querySelector('.quantity-btn_minus').disabled = false;
         }
         el.querySelector('.total-price b').innerHTML = `${(parseFloat(el.querySelector('.quantity').value) * parseFloat(el.querySelector('.unit-price b').innerHTML)).toFixed(2)}`;
-        sumTotalPrice();
+        calcSumShipping();
     });
     el.querySelectorAll('.quantity-btn').forEach((button) => {
         button.addEventListener('click', (event) => {
@@ -72,7 +96,7 @@ function quantityFun(el) {
                 }
             }
             el.querySelector('.total-price b').innerHTML = `${(parseFloat(el.querySelector('.quantity').value) * parseFloat(el.querySelector('.unit-price b').innerHTML)).toFixed(2)}`;
-            sumTotalPrice();
+            calcSumShipping();
         });
     });
 }
