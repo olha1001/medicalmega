@@ -26,8 +26,13 @@ let sliderCategories = tns({
     }
 });
 
+let yourOrder = document.querySelectorAll('.your_order'),
+    range = document.querySelectorAll('.range span'),
+    leftFor = document.querySelectorAll('.left_for'),
+    leftForPrice = document.querySelectorAll('.left_for span');
+
 //total sum products
-function sumTotalPrice() {
+function calcSumShipping() {
     let sum = 0;
     document.querySelectorAll('.total-price b').forEach((totalPrice) => {
         sum += parseFloat(totalPrice.innerHTML);
@@ -35,8 +40,27 @@ function sumTotalPrice() {
             totalValues.innerHTML = `$ ${sum.toFixed(2)}`;
         });
     });
+    for (var i = 0; i < yourOrder.length; i++) {
+        yourOrder[i].innerHTML = `<span>Your Order: </span> ${sum.toFixed(2)}`;
+        range[i].style.width = sum * 100 / 150 + '%';
+        leftForPrice[i].innerHTML = `$${(150 - sum).toFixed(2)}`
+        if (sum < 150 && sum >= 130) {
+            leftFor[i].innerHTML = `<span>$${(150 - sum).toFixed(2)} </span>  only left for free delivery`;
+            document.querySelector('.popup .range_shipping_left h2').innerHTML = `Get Free Delivery`;
+            document.querySelector('.popup .range_shipping_left p').innerHTML = `Add more products to your order`; 
+        } else if (sum >= 150) {
+            leftFor[0].innerHTML = `You Have Free Shipping`;
+            leftFor[1].innerHTML = ``;
+            document.querySelector('.popup .range_shipping_left h2').innerHTML = `You Have Free Shipping`;
+            document.querySelector('.popup .range_shipping_left p').innerHTML = ``; 
+        } else {
+            document.querySelector('.popup .range_shipping_left h2').innerHTML = `Get Free Delivery`;
+            document.querySelector('.popup .range_shipping_left p').innerHTML = `Add more products to your order`; 
+            leftFor[i].innerHTML = `<span>$${(150 - sum).toFixed(2)} </span>  left for free delivery`;
+        }
+    }
 }
-sumTotalPrice();
+calcSumShipping();
 
 //change quantity
 function quantityFun(el) {
@@ -54,7 +78,7 @@ function quantityFun(el) {
             el.querySelector('.quantity-btn_minus').disabled = false;
         }
         el.querySelector('.total-price b').innerHTML = `${(parseFloat(el.querySelector('.quantity').value) * parseFloat(el.querySelector('.unit-price b').innerHTML)).toFixed(2)}`;
-        sumTotalPrice();
+        calcSumShipping();
     });
     el.querySelectorAll('.quantity-btn').forEach((button) => {
         button.addEventListener('click', (event) => {
@@ -71,8 +95,10 @@ function quantityFun(el) {
                     button.nextElementSibling.value = +button.nextElementSibling.value - 1;
                 }
             }
-            el.querySelector('.total-price b').innerHTML = `${(parseFloat(el.querySelector('.quantity').value) * parseFloat(el.querySelector('.unit-price b').innerHTML)).toFixed(2)}`;
-            sumTotalPrice();
+            if (el.querySelector('.total-price b')) {
+                el.querySelector('.total-price b').innerHTML = `${(parseFloat(el.querySelector('.quantity').value) * parseFloat(el.querySelector('.unit-price b').innerHTML)).toFixed(2)}`;
+                calcSumShipping();
+            }
         });
     });
 }
@@ -95,6 +121,8 @@ document.querySelectorAll('.add-to-cart button').forEach((item, index) => {
 
 //click on plus/minus button
 document.querySelectorAll('.popup__product').forEach(el => quantityFun(el))
+document.querySelectorAll('.sticky-btn').forEach(el => quantityFun(el))
+document.querySelectorAll('.pdp_gty').forEach(el => quantityFun(el))
 
 //hide popup
 function hidePopup() {
@@ -104,9 +132,9 @@ function hidePopup() {
 document.querySelector('.popup .continue-shopping').addEventListener('click', hidePopup);
 document.querySelector('.popup .close').addEventListener('click', hidePopup);
 
-function resize() {
+function resizeChange() {
+    //popup
     if (window.matchMedia("(max-width: 1009px)").matches) {
-        console.log('r1')
         document.querySelectorAll('.product-description b').forEach((el, i) => {
             el.after(el.closest('.popup__product').querySelector('.quantity-row'));
         });
@@ -114,6 +142,8 @@ function resize() {
         document.querySelector('.popup__bottom .paypal-button').before(document.querySelector('.popup__product-total'));
         document.querySelector('.popup__bottom').before(document.querySelector('.bought-products'));
         document.querySelector('.bought-products .title3').innerHTML = 'You May Also Like';
+        document.querySelector('.popup .range').after(leftFor[1])
+        document.querySelector('.popup .your_order').before(document.querySelector('.popup .range_shipping_left'))
     } else {
         document.querySelector('.paypal-button input[type="image"]').setAttribute('src', 'https://i.ibb.co/CJCszqD/btn-paywith-primary-l-1.png')
         document.querySelector('.body').after(document.querySelector('.popup__product-total'));
@@ -122,7 +152,52 @@ function resize() {
         document.querySelectorAll('.popup__product td .q').forEach((el, i) => {
             el.after(el.closest('.popup__product').querySelector('.quantity-row'));
         });
+        
+        document.querySelector('.popup .your_order').after(leftFor[1])
+        document.querySelector('.popup .range_shipping_right').before(document.querySelector('.popup .range_shipping_left'))
+    }
+    //main 
+    if (document.querySelector('.homepage-container .range') != null) {
+        if (window.matchMedia("(max-width: 758px)").matches) {
+            document.querySelector('.homepage-container .range').after(yourOrder[0])
+        } else {
+            document.querySelector('.homepage-container .left_for').before(yourOrder[0])
+        }
+    }
+    //pdp 
+    if (document.querySelector('.pdp') != null && window.matchMedia("(max-width: 1009px)").matches) {
+        document.querySelector('.price-product').after(document.querySelectorAll('.range_shipping')[0]);
+        document.querySelector('.pdp .range').after(yourOrder[0]);
+    } else {
+        document.querySelectorAll('h3')[0].after(document.querySelectorAll('.range_shipping')[0]);
+        document.querySelector('.pdp .left_for').before(yourOrder[0]);
     }
 }
-resize()
-window.addEventListener('resize', resize);
+resizeChange();
+window.addEventListener('resize', resizeChange);
+
+//read more (pdp)
+if (document.getElementById('product_desc') != null && window.matchMedia("(max-width: 1010px)").matches) {
+    if (document.querySelectorAll('#product_desc p')) {
+        document.querySelectorAll('#product_desc p').forEach((el,i) => {
+            if (i != (document.querySelectorAll('#product_desc p').length - 1)) {
+                if(el.nextElementSibling.tagName == 'UL') {
+                    el.classList.add('active');
+                }
+            }
+        });
+    }
+    document.querySelector('.read-more').addEventListener('click', (e) => {
+        document.querySelector('#product_desc').classList.add('active');
+        e.target.hidden = true;
+    });
+}
+
+//hide sticky button on scrollY > 200, else show
+document.addEventListener('scroll', (e) => {
+    if (window.scrollY > 200) {
+        document.querySelector('.sticky-btn').classList.remove('active');
+    } else {
+        document.querySelector('.sticky-btn').classList.add('active');
+    }
+});
