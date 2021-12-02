@@ -198,7 +198,7 @@ if (document.getElementById('product_desc') != null && window.matchMedia("(max-w
 
 //hide sticky button on scrollY > 200, else show
 document.addEventListener('scroll', (e) => {
-    if ( document.querySelector('.sticky-btn') != null) {
+    if ( document.querySelector('.sticky-btn') != null && window.matchMedia("(max-width: 759px)").matches) {
         if (window.scrollY > 200) {
             document.querySelector('.sticky-btn').classList.remove('active');
         } else {
