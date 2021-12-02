@@ -857,6 +857,7 @@ div.checkout {
     color: #C23D31;
 }
 /*media*/
+
 @media (min-width: 760px) and (max-width: 1010px) {
     fieldset.topcon div.type1, fieldset.topcon div.type2 {
         margin: 0 auto 1em;
