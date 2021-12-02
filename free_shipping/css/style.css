@@ -1233,6 +1233,12 @@ div.checkout {
 }
 
 @media only screen and (max-width: 758px) {
+    .sticky-btn_row, .pdp .range_shipping {
+        padding: 0!important;
+    }
+    .pdp .btmcon {
+        margin-left: 0;
+    }
 
     fieldset.topcon div.type1, fieldset.topcon div.type2 {
         width: 140px;

@@ -165,13 +165,16 @@ function resizeChange() {
         }
     }
     //pdp 
-    if (document.querySelector('.pdp') != null && window.matchMedia("(max-width: 1009px)").matches) {
-        document.querySelector('.price-product').after(document.querySelectorAll('.range_shipping')[0]);
-        document.querySelector('.pdp .range').after(yourOrder[0]);
-    } else {
-        document.querySelectorAll('h3')[0].after(document.querySelectorAll('.range_shipping')[0]);
-        document.querySelector('.pdp .left_for').before(yourOrder[0]);
+    if (document.querySelector('.pdp') != null) {
+        if (window.matchMedia("(max-width: 1009px)").matches) {
+            document.querySelector('.price-product').after(document.querySelectorAll('.range_shipping')[0]);
+            document.querySelector('.pdp .range').after(yourOrder[0]);
+        } else {
+            document.querySelectorAll('h3')[0].after(document.querySelectorAll('.range_shipping')[0]);
+            document.querySelector('.pdp .left_for').before(yourOrder[0]);
+        }
     }
+
 }
 resizeChange();
 window.addEventListener('resize', resizeChange);
@@ -201,3 +204,8 @@ document.addEventListener('scroll', (e) => {
         document.querySelector('.sticky-btn').classList.add('active');
     }
 });
+
+//add to cart button
+document.querySelectorAll('.add-cart').forEach(button => {
+    button.addEventListener('click', openPopup)
+})
