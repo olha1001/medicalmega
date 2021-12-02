@@ -856,6 +856,9 @@ div.checkout {
     line-height: 23px;
     color: #C23D31;
 }
+.sticky-btn {
+    display: none;
+}
 /*media*/
 
 @media (min-width: 760px) and (max-width: 1010px) {
@@ -928,6 +931,9 @@ div.checkout {
 }
 
 @media only screen and (max-width: 1010px) {
+    .sticky-btn {
+        display: block;
+    }
     .read-more {
         display: block;
     }
