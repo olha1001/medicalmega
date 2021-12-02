@@ -198,10 +198,12 @@ if (document.getElementById('product_desc') != null && window.matchMedia("(max-w
 
 //hide sticky button on scrollY > 200, else show
 document.addEventListener('scroll', (e) => {
-    if (window.scrollY > 200) {
-        document.querySelector('.sticky-btn').classList.remove('active');
-    } else {
-        document.querySelector('.sticky-btn').classList.add('active');
+    if ( document.querySelector('.sticky-btn') != null) {
+        if (window.scrollY > 200) {
+            document.querySelector('.sticky-btn').classList.remove('active');
+        } else {
+            document.querySelector('.sticky-btn').classList.add('active');
+        }
     }
 });
 
