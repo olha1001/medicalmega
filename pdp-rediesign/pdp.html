@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>pdp</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="img/fav_icon.png" type="image/png">
+    <link rel="stylesheet" href="https://medicalmega.com/style.css" type="text/css">
+    <link rel="stylesheet" href="https://medicalmega.com/js/Pikaday/css/pikaday.css" type="text/css">
+    <link rel="stylesheet" href="https://medicalmega.com/../js/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <div class="main">
+      <header class="header">
+        <div class="supbar">
+          <div class="container flex-center-between">
+            <p class="align-items-center"><img src="img/common/quotation.svg" alt="icon quotation">Customer Service</p>
+            <div class="d-flex"><a href="tel:17182084380"><span class="fw-light">Local Phone #</span>1-718-208-4380</a><a class="ml-40" href="tel:18556336342"><span class="fw-light">Toll Free Phone #</span>1-855-MED-MEGA (633-6342)</a></div>
+          </div>
+        </div>
+        <div class="midbar">
+          <div class="container">
+            <div class="flex-center-between"><a class="logo" href="#">Medical<span>Mega</span></a>
+              <button class="btn btn_white" type="button" data-button="advanced-search">Advanced Search</button>
+              <form class="form-search">
+                <input type="text" placeholder="Search by Name">
+                <button type="submit"></button>
+              </form>
+              <div class="align-items-center"><a class="align-items-center midbar_action" href="https://medicalmega.com/myaccount.html"><img class="mr-12" src="img/common/user.svg" alt="icon account"><span>Account</span></a><a class="align-items-center ml-40 midbar_action" href="https://medicalmega.com/cart.html"><img class="mr-12" src="img/common/cart.svg" alt="icon Cart"><span>Cart</span></a></div>
+            </div>
+          </div>
+        </div>
+        <form class="advanced-search" data-item="advanced-search">
+          <div class="container flex-center-between">
+            <p class="fs-10">Advanced Search</p>
+            <div class="d-flex">
+              <input type="text" placeholder="Enter Item #">
+              <input type="text" placeholder="Enter Keyword">
+              <div class="select">
+                <select>
+                  <option value="Select Category" disabled selected>Select Category</option>
+                  <option value="Category 1">Category 1</option>
+                </select>
+              </div>
+              <div class="select">
+                <select>
+                  <option value="Select Manufacturer" disabled selected>Select Manufacturer</option>
+                  <option value="Manufacturer 1">Manufacturer 1</option>
+                </select>
+              </div>
+              <button class="btn btn_dark" type="submit">Submit</button>
+            </div>
+            <button class="btn_reset" type="reset" data-close="advanced-search"></button>
+          </div>
+        </form>
+        <div class="subbar">
+          <div class="container d-flex">
+            <nav class="nav_category"><a class="align-items-center" href="#">
+                <div class="burger_category">
+                  <div class="burger_line"></div>
+                  <div class="burger_line"></div>
+                  <div class="burger_line"></div>
+                </div><span class="p-main">All Categories</span></a></nav>
+            <ul class="d-flex category_popular">
+              <li> <a href="#">New Products</a></li>
+              <li> <a href="#">Sale Products</a></li>
+              <li> <a href="#">Hand Sanitizing</a></li>
+              <li> <a href="#">Wound care</a></li>
+              <li> <a href="#">Gloves</a></li>
+              <li> <a href="#">Disinfectants</a></li>
+              <li> <a href="#">Ostomy</a></li>
+              <li> <a href="#">Instruments</a></li>
+            </ul>
+          </div>
+        </div>
+        <button class="burger" id="burger" type="button"><span class="burger-line burger-line-top"></span><span class="burger-line burger-line-center"></span><span class="burger-line burger-line-bottom"></span></button>
+      </header>
+      <div class="container"> 
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="href">Home </a>
+          </li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="href"> &gt; Hand Sanitizing</a>
+          </li>
+          <li class="breadcrumbs__item"><span class="breadcrumbs__text"> &gt; Face Mask, 3 Ply, Ear Loop Box of 50</span>
+          </li>
+        </ul>
+        <div class="flex-wrap w-100 justify-content-between product"> 
+          <div class="col_left flex-wrap"> 
+            <div class="side_one">
+              <div class="slider-nav">
+                <div class="slide active"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="image 1"></div>
+                <div class="slide"><img src="https://medicalmegaimgs.net/prod/uploaded/product/15936422447741235045efd0d04e7bc0.jpg" alt="image 2"></div>
+              </div>
+              <div class="trustpilot">trustpilot</div>
+            </div>
+            <div class="side_two">
+              <div class="slider-for">
+                <div class="slide" data-item="show-zoom"><img class="slider-for_img" id="forImg" src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="image 2">
+                  <div class="img-zoom-result" id="zoomResult"></div>
+                </div>
+              </div>
+              <p class="text-small text-center">Image shown for reference purposes only. Actual product appearance may vary.</p>
+            </div>
+          </div>
+          <div class="col_right"> 
+            <div class="range"> 
+              <div class="flex-center-between">
+                <p> <span class="c-gray">Your Order: </span>$<span id="order-pr">15.00</span></p>
+                <p class="text-up"> <span class="c-red fw-semi">$<span id="last-pr">135.00 </span></span>left for free shipping</p>
+              </div>
+              <div class="range_slider"><span></span></div>
+            </div>
+            <div class="product_content justify-content-between"> 
+              <div class="col_mid">
+                <h2 class="title">Face Mask, 3 Ply, Ear Loop Box <span class="text-nowrap">of 50</span></h2>
+                <ul class="list"> 
+                  <li>
+                     Sold By: <span class="fw-semi">Box of 50</span></li>
+                  <li>
+                     Item Number: <span class="fw-semi">MK-3PL</span></li>
+                  <li>
+                     Manufacturer: <span class="fw-semi">Generica</span></li>
+                </ul>
+                <ul class="tabs-discription d-flex">
+                  <li class="active">Product details</li>
+                  <li>Product composition</li>
+                  <li>Shipping details</li>
+                </ul>
+                <div class="content-discription">
+                  <div class="content-item active"> 
+                    <p>70% Alcohol with Aloe Hand Sanitizer, Citrus Fragrance, 4oz.</p>
+                    <p>This waterless formula allows use everywhere, anytime. Clinical studies performed by independent laboratories using FDA recommended study (test) guidelines concluded that Hydrox Waterless Instant Hand Sanitizers demonstrate rapid kill times:</p>
+                    <p>On a broad range of gram-negative and gram-positive bacteria.</p>
+                    <p>On Antibiotic-resistant organisms.</p>
+                    <p>Ethyl alcohol's exceptional cidal activity has led to its recognition as the most effective agent available for a waterless hand sanitizer.</p>
+                  </div>
+                  <div class="content-item">2</div>
+                  <div class="content-item">3</div>
+                </div>
+              </div>
+              <div class="product_sidebar">
+                <div class="align-items-center"> <img class="mr-12" src="img/common/car.svg" alt="icon shipping">
+                  <div> 
+                    <p class="c-red text-up fw-semi l-t-02">Estimated shipping</p>
+                    <p class="c-gray">2-3 business days*</p>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="flex-center-between fw-semi price">
+                  <p class="fs-16">Price:</p>
+                  <p class="fs-24">$2.75</p>
+                </div>
+                <div class="flex-center-center calc"> 
+                  <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                  <input class="calc-qty" type="number" value="1">
+                  <button class="btn-calc btn-calc_plus" type="button"></button>
+                </div>
+                <button class="btn btn_dark" type="button">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="similar-products">
+          <h2 class="text-center">Similar Products</h2>
+          <div class="justify-content-between"> 
+            <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Procedure Surgical Face Mask, 3 Ply, Ear Loop, Blue"><span>Procedure Surgical Face Mask, 3 Ply, Ear Loop, Blue</span></a>
+              <div>
+                <div class="flex-center-center calc"> 
+                  <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                  <input class="calc-qty" type="number" value="1">
+                  <button class="btn-calc btn-calc_plus" type="button"></button>
+                </div>
+                <button class="btn btn_dark" type="button"><span>$15.95 | Add to Cart</span></button>
+              </div>
+            </div>
+            <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="3M Particulate Respirator Mask"><span>3M Particulate Respirator Mask</span></a>
+              <div>
+                <div class="flex-center-center calc"> 
+                  <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                  <input class="calc-qty" type="number" value="1">
+                  <button class="btn-calc btn-calc_plus" type="button"></button>
+                </div>
+                <button class="btn btn_dark" type="button"><span>$15.95 | Add to Cart</span></button>
+              </div>
+            </div>
+            <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Hand Sanitizer, 70% Alcohol with Aloe , Citrus Fragrance, 4oz"><span>Hand Sanitizer, 70% Alcohol with Aloe , Citrus Fragrance, 4oz</span></a>
+              <div>
+                <div class="flex-center-center calc"> 
+                  <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                  <input class="calc-qty" type="number" value="1">
+                  <button class="btn-calc btn-calc_plus" type="button"></button>
+                </div>
+                <button class="btn btn_dark" type="button"><span>$2.75 | Add to Cart</span></button>
+              </div>
+            </div>
+            <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+              <div>
+                <div class="flex-center-center calc"> 
+                  <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                  <input class="calc-qty" type="number" value="1">
+                  <button class="btn-calc btn-calc_plus" type="button"></button>
+                </div>
+                <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="js/zoom.js"></script>
+    <script>imageZoom("forImg", "zoomResult")</script>
+    <script type="application/javascript" src="https://medicalmega.com/js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
