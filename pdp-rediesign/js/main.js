@@ -7,7 +7,7 @@ let btnPlus = document.querySelectorAll('.btn-calc_plus'), //btn +
     dataButton = document.querySelectorAll('[data-button]'), // btn for open popup or block
     closeBtn = document.querySelectorAll('[data-close]'), //btn close for hide popup or block
     slidesNav = document.querySelectorAll('.slider-nav .slide'), //slides navigation
-    slidesFor = document.querySelectorAll('.slider-for'); //slider main
+    slidesFor = document.querySelectorAll('.slider-for .slide'); //slider main
 
 function changeQty(qty,action) {
     if (action == 'plus') {
