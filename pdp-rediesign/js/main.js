@@ -7,9 +7,12 @@ let btnPlus = document.querySelectorAll('.btn-calc_plus'), //btn +
     dataButton = document.querySelectorAll('[data-button]'), // btn for open popup or block
     closeBtn = document.querySelectorAll('[data-close]'), //btn close for hide popup or block
     slidesNav = document.querySelectorAll('.slider-nav .slide'), //slides navigation
-    slidesFor = document.querySelectorAll('.slider-for .slide'); //slider main
+    slidesFor = document.querySelectorAll('.slider-for .slide'), //slider main
+    addToCartMain = document.querySelector('.product_sidebar .add-cart'), //add To Cart button pdp
+    addToCartSimilar = document.querySelectorAll('.card .add-cart'), //add To Cart buttons in "similar products"
+    price = document.querySelectorAll('.pr'); //price
 
-function changeQty(qty,action) {
+function changeQty(qty,pr,action) {
     if (action == 'plus') {
         qty.value = parseInt(qty.value) + 1;
     } else if (action == 'minus') {
@@ -21,12 +24,14 @@ function changeQty(qty,action) {
         qty.previousElementSibling.disabled = true;
         qty.value = 1;
     }
+    pr.innerHTML= (+pr.dataset.price * +qty.value).toFixed(2)
 }
 
 //+/- btns quantity
 calc.forEach((el, i) => {
-    btnPlus[i].addEventListener('click', () => changeQty(inputQty[i],'plus'))
-    btnMinus[i].addEventListener('click', () => changeQty(inputQty[i],'minus'))
+    btnPlus[i].addEventListener('click', () => changeQty(inputQty[i], price[i],'plus'))
+    btnMinus[i].addEventListener('click', () => changeQty(inputQty[i], price[i],'minus'))
+    inputQty[i].addEventListener('input', () => changeQty(inputQty[i], price[i]))
 })
 
 //descriptions
