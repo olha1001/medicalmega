@@ -58,22 +58,30 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield; }
-
+ 
 *::-webkit-input-placeholder {
-  color: #6D7E85;
-  line-height: 25px; }
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #9AA6AB;
+  line-height: 26px; }
 
 *:-moz-placeholder {
-  color: #6D7E85;
-  line-height: 25px; }
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #9AA6AB;
+  line-height: 26px; }
 
 *::-moz-placeholder {
-  color: #6D7E85;
-  line-height: 25px; }
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #9AA6AB;
+  line-height: 26px; }
 
 *:-ms-input-placeholder {
-  color: #6D7E85;
-  line-height: 25px; }
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #9AA6AB;
+  line-height: 26px; }
 
 input {
   -webkit-appearance: none;
@@ -85,7 +93,7 @@ input {
   padding: 7.5px 20px;
   width: 100%;
   font-size: 14px;
-  line-height: 25px; }
+  line-height: 26px; }
 
 .container {
   max-width: 1270px;
@@ -316,9 +324,9 @@ input {
       transform: translateY(-50%) rotate(-224deg); }
 
 .btn_reset {
-  background: transparent url("https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/close.svg") no-repeat center/contain;
-  width: 20px;
-  height: 20px;
+  background: transparent url("https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/close.svg") no-repeat right center/contain;
+  width: 150px;
+  height: 24px;
   cursor: pointer; }
 
 .advanced-search {
@@ -331,49 +339,57 @@ input {
   transition: all 0.3s ease;
   pointer-events: none; }
   .advanced-search.active {
-    padding: 13px 0;
+    padding: 16px 0;
     height: 60px;
     opacity: 1;
     pointer-events: auto; }
   .advanced-search input {
-    padding: 4px 28px;
-    background: #E9EBEC;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
+    padding: 2px 14px;
+    background-color: #F0F1F2;
     width: fit-content;
-    max-width: 153px;
+    border: 1px solid #E0E4E5;
+    max-width: 115px;
+    font-size: 12px;
+    line-height: 26px;
     text-align: center;
-    margin-right: 28px; }
+    margin-right: 20px; }
   .advanced-search .btn {
-    line-height: 29px;
-    font-size: 12px; }
+      font-weight: 600;
+    line-height: 28px;
+    margin-left: 20px;
+    font-size: 10px; }
   .advanced-search .select {
-    margin-right: 28px; }
+    margin-right: 20px; }
 
 .select {
   position: relative;
-  max-width: 214px; }
+  max-width: 165px; }
   .select:before {
     content: '';
     position: absolute;
     top: 50%;
+    right: 13px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    right: 0;
-    width: 30px;
-    height: 100%;
-    background: url("https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/arrow-down.svg") no-repeat left center/14px; }
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-radius: 0.5px;
+    border-color: #9AA6AB transparent transparent transparent;}
   .select select {
-    background: #E9EBEC;
+    width: 100%;
+    height: auto!important;
+    background-color: #F0F1F2;
     border-radius: 30px;
+    border: 1px solid #E0E4E5;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 25px;
-    color: #6D7E85;
-    border: none;
-    padding: 4px 59px 4px 20px; }
-
+    font-size: 12px;
+    line-height: 26px;
+    padding: 2px 30px 2px 16px; }
+option:not(:checked) {
+  color: #6D7E85;}
 .range_slider {
   position: relative;
   background: #E9EBEC;
@@ -618,14 +634,14 @@ input {
     height: 199px;
     object-fit: contain;
     margin-bottom: 16px; }
-   .card_name {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 130%;
-      color: #344D57; }
-      .card_name span {
-        margin-bottom: 20px;
-        display: block; }
+  .card_name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: #344D57; }
+    .card_name span {
+      margin-bottom: 20px;
+      display: block; }
   .card .btn {
     padding: 0;
     font-size: 12px;
