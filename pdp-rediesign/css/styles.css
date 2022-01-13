@@ -186,7 +186,7 @@ input {
   color: #1E3944; }
  .midbar .btn {
   font-size: 12px;}
- .cart_count {
+ .midbar_action span.cart_count {
   color: #96280F;}
 .logo {
   font-weight: 800;
@@ -640,7 +640,7 @@ input {
 
 .product {
   padding-top: 17px;
-  padding-bottom: 45px; }
+  padding-bottom: 60px; }
 
 .breadcrumbs {
   padding: 10px 0 5px;
