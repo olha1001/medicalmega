@@ -23,13 +23,26 @@
         </div>
         <div class="midbar">
           <div class="container">
-            <div class="flex-center-between"><a class="logo" href="#">Medical<span>Mega</span></a>
-              <button class="btn btn_white" type="button" data-button="advanced-search">Advanced Search</button>
-              <form class="form-search">
-                <input type="text" placeholder="Search by Name">
-                <button type="submit"></button>
-              </form>
-              <div class="align-items-center"><a class="align-items-center midbar_action" href="https://medicalmega.com/myaccount.html"><img class="mr-12" src="img/common/user.svg" alt="icon account"><span>Account</span></a><a class="align-items-center ml-40 midbar_action" href="https://medicalmega.com/cart.html"><img class="mr-12" src="img/common/cart.svg" alt="icon Cart"><span>Cart</span></a></div>
+            <div class="flex-center-between"><a class="logo" href="/">Medical<span>Mega</span></a>
+                <div class="d-flex">
+                 <button class="btn btn_white mr-16" type="button" data-button="advanced-search">Advanced Search</button>
+                  <form class="form-search">
+                    <input type="text" placeholder="Search by Name">
+                    <button type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><g clip-path="url(#clip0_114_1946)" stroke="#fff"><path d="M6.857 13.313A6.457 6.457 0 106.857.4a6.457 6.457 0 000 12.913zm4.29-2.169l4.571 4.571"/></g><defs><clipPath id="clip0_114_1946"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+                    </button>
+                  </form>
+                </div>
+                <div class="align-items-center">
+                    <a class="align-items-center midbar_action mr-16" href="https://medicalmega.com/myaccount.html">
+                        <img class="mr-8" src="https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/user.svg" alt="icon account">
+                        <span>Account</span>
+                    </a>
+                    <a class="align-items-center midbar_action" href="https://medicalmega.com/cart.html">
+                        <img class="mr-8" src="https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/cart.svg" alt="icon Cart">
+                        <span>Cart (<span class="cart_count">0</span>)</span>
+                    </a>
+                </div>
             </div>
           </div>
         </div>
@@ -57,23 +70,24 @@
           </div>
         </form>
         <div class="subbar">
-          <div class="container d-flex">
+          <div class="container flex-center-between">
             <nav class="nav_category"><a class="align-items-center" href="#">
                 <div class="burger_category">
                   <div class="burger_line"></div>
                   <div class="burger_line"></div>
                   <div class="burger_line"></div>
                 </div><span class="p-main">All Categories</span></a></nav>
-            <ul class="d-flex category_popular">
-              <li> <a href="#">New Products</a></li>
-              <li> <a href="#">Sale Products</a></li>
-              <li> <a href="#">Hand Sanitizing</a></li>
-              <li> <a href="#">Wound care</a></li>
-              <li> <a href="#">Gloves</a></li>
-              <li> <a href="#">Disinfectants</a></li>
-              <li> <a href="#">Ostomy</a></li>
-              <li> <a href="#">Instruments</a></li>
+          <ul class="d-flex category_popular">
+              <li> <a href="/category/new-products">New Products</a></li>
+              <li> <a href="/sales.html">Sale Products</a></li>
+              <li> <a href="/category/hand-sanitizing">Hand Sanitizing</a></li>
+              <li> <a href="/category/wound-care">Wound care</a></li>
+              <li> <a href="/category/gloves">Gloves</a></li>
+              <li> <a href="/category/disinfectants">Disinfectants</a></li>
+              <li> <a href="/category/ostomy">Ostomy</a></li>
+              <li> <a href="/category/instruments">Instruments</a></li>
             </ul>
+            <p class="previous-version">switch to the previous version</p>
           </div>
         </div>
         <button class="burger" id="burger" type="button"><span class="burger-line burger-line-top"></span><span class="burger-line burger-line-center"></span><span class="burger-line burger-line-bottom"></span></button>
@@ -94,7 +108,7 @@
                 <div class="slide active"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="image 1"></div>
                 <div class="slide"><img src="https://medicalmegaimgs.net/prod/uploaded/product/15936422447741235045efd0d04e7bc0.jpg" alt="image 2"></div>
               </div>
-              <div class="trustpilot">trustpilot</div>
+              <div class="trustpilot"><div class="trustpilot-widget" data-locale="en-US" data-template-id="539ad0ffdec7e10e686debd7" data-businessunit-id="59d50f850000ff0005accc4e" data-style-height="130px" data-style-width="90%" data-theme="light" data-stars="5" style="position: relative;"><iframe title="Customer reviews powered by Trustpilot" loading="auto" src="https://widget.trustpilot.com/trustboxes/539ad0ffdec7e10e686debd7/index.html?templateId=539ad0ffdec7e10e686debd7&amp;businessunitId=59d50f850000ff0005accc4e#locale=en-US&amp;styleHeight=130px&amp;styleWidth=90%25&amp;theme=light&amp;stars=5" style="position: relative; height: 130px; width: 90%; border-style: none; display: block; overflow: hidden;"></iframe></div></div>
             </div>
             <div class="side_two">
               <div class="slider-for">
@@ -106,10 +120,10 @@
             </div>
           </div>
           <div class="col_right"> 
-            <div class="range"> 
+           <div class="range"> 
               <div class="flex-center-between">
                 <p> <span class="c-gray">Your Order: </span>$<span id="order-pr">15.00</span></p>
-                <p class="text-up"> <span class="c-red fw-semi">$<span id="last-pr">135.00 </span></span>left for free shipping</p>
+                <p class="text-up l-t-02"> <span class="c-red fw-semi">$<span id="last-pr">135.00 </span></span>left for free shipping</p>
               </div>
               <div class="range_slider"><span></span></div>
             </div>
@@ -149,24 +163,28 @@
                   </div>
                 </div>
                 <div class="line"></div>
-                <div class="flex-center-between fw-semi price">
+                <div class="flex-end-between fw-semi total">
                   <p class="fs-16">Price:</p>
-                  <p class="fs-24">$2.75</p>
+                  <p class="fs-24">$<span class="pr">2.75</span></p>
                 </div>
                 <div class="flex-center-center calc"> 
                   <button class="btn-calc btn-calc_minus" type="button" disabled></button>
                   <input class="calc-qty" type="number" value="1">
                   <button class="btn-calc btn-calc_plus" type="button"></button>
                 </div>
-                <button class="btn btn_dark" type="button">Add to Cart</button>
+                <button class="btn btn_dark add-cart" type="button">Add to Cart</button>
               </div>
             </div>
           </div>
         </div>
         <section class="similar-products">
           <h2 class="text-center">Similar Products</h2>
-          <div class="justify-content-between"> 
-            <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Procedure Surgical Face Mask, 3 Ply, Ear Loop, Blue"><span>Procedure Surgical Face Mask, 3 Ply, Ear Loop, Blue</span></a>
+          <div class="justify-content-between cards_similar"> 
+            <div class="card" data-variant="" data-id="">
+              <a class="card_name" href="#">
+                <img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Procedure Surgical Face Mask, 3 Ply, Ear Loop, Blue">
+                <span>Procedure Surgical Face Mask, 3 Ply, Ear Loop, Blue</span>
+              </a>
               <div>
                 <div class="flex-center-center calc"> 
                   <button class="btn-calc btn-calc_minus" type="button" disabled></button>
@@ -176,7 +194,7 @@
                 <button class="btn btn_dark" type="button"><span>$15.95 | Add to Cart</span></button>
               </div>
             </div>
-            <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="3M Particulate Respirator Mask"><span>3M Particulate Respirator Mask</span></a>
+            <div class="card" data-variant="" data-id=""><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="3M Particulate Respirator Mask"><span>3M Particulate Respirator Mask</span></a>
               <div>
                 <div class="flex-center-center calc"> 
                   <button class="btn-calc btn-calc_minus" type="button" disabled></button>
@@ -186,7 +204,11 @@
                 <button class="btn btn_dark" type="button"><span>$15.95 | Add to Cart</span></button>
               </div>
             </div>
-            <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Hand Sanitizer, 70% Alcohol with Aloe , Citrus Fragrance, 4oz"><span>Hand Sanitizer, 70% Alcohol with Aloe , Citrus Fragrance, 4oz</span></a>
+            <div class="card" data-variant="" data-id="">
+              <a class="card_name" href="#">
+                <img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Hand Sanitizer, 70% Alcohol with Aloe , Citrus Fragrance, 4oz">
+                <span>Hand Sanitizer, 70% Alcohol with Aloe , Citrus Fragrance, 4oz</span>
+              </a>
               <div>
                 <div class="flex-center-center calc"> 
                   <button class="btn-calc btn-calc_minus" type="button" disabled></button>
@@ -196,7 +218,11 @@
                 <button class="btn btn_dark" type="button"><span>$2.75 | Add to Cart</span></button>
               </div>
             </div>
-            <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+            <div class="card" data-variant="" data-id="">
+              <a class="card_name" href="#">
+                <img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150">
+                <span>Ansel Latex Exam Gloves, Medium Box of 150</span>
+              </a>
               <div>
                 <div class="flex-center-center calc"> 
                   <button class="btn-calc btn-calc_minus" type="button" disabled></button>
