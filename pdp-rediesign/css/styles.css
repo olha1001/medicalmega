@@ -616,15 +616,15 @@ input {
     width: 100%;
     height: 199px;
     object-fit: contain;
-    margin-bottom: 20px; }
-  .card_name {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 140%;
-    color: #000000; }
-    .card_name span {
-      margin-bottom: 20px;
-      display: block; }
+    margin-bottom: 16px; }
+   .card_name {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 130%;
+      color: #344D57; }
+      .card_name span {
+        margin-bottom: 20px;
+        display: block; }
   .card .btn {
     padding: 0;
     font-size: 12px;
