@@ -46,22 +46,25 @@
             </div>
           </div>
         </div>
-        <form class="advanced-search" data-item="advanced-search">
+       <form class="advanced-search" data-item="advanced-search">
           <div class="container flex-center-between">
             <p class="fs-14 c-gray">Advanced Search</p>
             <div class="d-flex">
-              <input type="text" placeholder="Enter Item #">
-              <input type="text" placeholder="Enter Keyword">
-              <div class="select">
-                <select>
-                  <option value="Select Category" disabled selected>Select Category</option>
-                  <option value="Category 1">Category 1</option>
+              <input type="text" placeholder="Enter Item #" name="search_item">
+              <input type="text" placeholder="Enter Keyword" name="search_keyword">
+              <div class="select select_category">
+                <select name="search_c_id">
+                  <option value="">Select Category</option>
+                  <option value="408">New Products!</option>
+                  <option value="7216">|____Fluid Management</option>
+
                 </select>
               </div>
-              <div class="select">
-                <select>
-                  <option value="Select Manufacturer" disabled selected>Select Manufacturer</option>
-                  <option value="Manufacturer 1">Manufacturer 1</option>
+               <div class="select select_brand">
+                <select name="search_m_id">
+                  <option value="">Select Manufacturer</option>
+                  <option value="1233">21st century nutritional products</option>
+                   <option value="452">3D Dental</option>
                 </select>
               </div>
               <button class="btn btn_dark" type="submit">Submit</button>
