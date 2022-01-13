@@ -216,7 +216,7 @@ input {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #1E3944 url("https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/magnifier.svg") no-repeat center/16px; }
+    background-color: #1E3944; }
 
 .subbar {
   border-top: 1px solid #BCC4C7;
