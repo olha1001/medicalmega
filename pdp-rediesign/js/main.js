@@ -103,14 +103,27 @@ document.querySelectorAll('.select_current').forEach((el) => {
     })
 })
 
+function remActiveSelect() {
+    document.querySelectorAll('.select').forEach(el => el.classList.remove('active'))
+}
+
 document.body.addEventListener('click', (e) => {
     if (e.target.className != 'select_current') {
-        document.querySelectorAll('.select').forEach(el => {
-            el.classList.remove('active')
-        })
+        remActiveSelect()
     }
 })
 
+window.addEventListener('scroll', () => {
+    remActiveSelect()
+})
+
 //range
-let subtotal = +document.querySelector('#order-pr').innerText;
-document.querySelector('.range_slider span').style.width = subtotal * 100 / 150 + '%';
+if (document.querySelector('#order-pr')) {
+    let subtotal = +document.querySelector('#order-pr').innerText;
+    document.querySelector('.range_slider span').style.width = subtotal * 100 / 150 + '%';
+}
+
+//select filter
+document.querySelectorAll('.select_filter').forEach(el => {
+    el.querySelector('.select_item').addEventListener('click', () => el.classList.toggle('active'))
+})
