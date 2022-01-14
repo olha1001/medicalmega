@@ -52,20 +52,19 @@
             <div class="d-flex">
               <input type="text" placeholder="Enter Item #" name="search_item">
               <input type="text" placeholder="Enter Keyword" name="search_keyword">
-              <div class="select select_category">
-                <select name="search_c_id">
-                  <option value="">Select Category</option>
-                  <option value="408">New Products!</option>
-                  <option value="7216">|____Fluid Management</option>
-
-                </select>
+              <div class="select select_category" name="search_c_id">
+                <p class="select_current"><span>Select Category</span></p>
+                  <ul class="select_dropdown">
+                    <li class="select_option active">Select Category</li>
+                    <li class="select_option">New Products!</li>
+                  </ul>
               </div>
-               <div class="select select_brand">
-                <select name="search_m_id">
-                  <option value="">Select Manufacturer</option>
-                  <option value="1233">21st century nutritional products</option>
-                   <option value="452">3D Dental</option>
-                </select>
+              <div class="select select_brand" name="search_m_id"> 
+                <p class="select_current"><span >Select Manufacturer</span></p>
+                <ul class="select_dropdown"> 
+                  <li class="select_option active">Select Manufacturer</li>
+                  <li class="select_option">21st century nutritional products</li>
+                </ul>
               </div>
               <button class="btn btn_dark" type="submit">Submit</button>
             </div>
