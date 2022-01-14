@@ -8,8 +8,6 @@ let btnPlus = document.querySelectorAll('.btn-calc_plus'), //btn +
     closeBtn = document.querySelectorAll('[data-close]'), //btn close for hide popup or block
     slidesNav = document.querySelectorAll('.slider-nav .slide'), //slides navigation
     slidesFor = document.querySelectorAll('.slider-for .slide'), //slider main
-    addToCartMain = document.querySelector('.product_sidebar .add-cart'), //add To Cart button pdp
-    addToCartSimilar = document.querySelectorAll('.card .add-cart'), //add To Cart buttons in "similar products"
     price = document.querySelectorAll('.pr'); //price
 
 function changeQty(qty,pr,action) {
