@@ -82,10 +82,12 @@ slidesNav.forEach((el,i) => {
     })
 })
 
-
 //select
 document.querySelectorAll('.select_current').forEach((el) => {
     el.addEventListener('click',() => {
+        document.querySelectorAll('.select').forEach(selects => {
+            selects.classList.remove('active')
+        })
         el.closest('.select').classList.toggle('active');
     })
     el.nextElementSibling.querySelectorAll('.select_option').forEach( (option, index) => {
@@ -103,13 +105,10 @@ document.querySelectorAll('.select_current').forEach((el) => {
                 document.querySelector('#search_m_id').selectedIndex = index;
             }
             if (index == 0) {
-                el.querySelector('span').innerHTML = option.innerHTML;
+                el.innerHTML = `<span>${option.innerHTML}</span>`;
             } else {
                 el.innerHTML = option.innerHTML;
             }
-            document.querySelectorAll('.select').forEach(el => {
-                el.classList.remove('active')
-            })
         })
     })
 })
@@ -121,4 +120,3 @@ document.body.addEventListener('click', (e) => {
         })
     }
 })
-
