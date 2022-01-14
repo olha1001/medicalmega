@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>listing</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="img/fav_icon.png" type="image/png">
+    <link rel="stylesheet" href="https://medicalmega.com/style.css" type="text/css">
+    <link rel="stylesheet" href="https://medicalmega.com/js/Pikaday/css/pikaday.css" type="text/css">
+    <link rel="stylesheet" href="https://medicalmega.com/../js/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <div class="main">
+      <header class="header">
+        <div class="supbar">
+          <div class="container flex-center-between">
+            <p class="align-items-center"><img src="img/common/quotation.svg" alt="icon quotation">Customer Service</p>
+            <div class="d-flex"><a href="tel:17182084380"><span class="fw-light">Local Phone #</span>1-718-208-4380</a><a class="ml-40" href="tel:18556336342"><span class="fw-light">Toll Free Phone #</span>1-855-MED-MEGA (633-6342)</a></div>
+          </div>
+        </div>
+        <div class="midbar">
+          <div class="container">
+            <div class="flex-center-between"><a class="logo" href="/">Medical<span>Mega</span></a>
+              <div class="d-flex">
+                <button class="btn btn_white mr-16" type="button" data-button="advanced-search">Advanced Search</button>
+                <form class="form-search">
+                  <input type="text" placeholder="Search by Name">
+                  <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                      <g clip-path="url(#clip0_114_1946)" stroke="#fff">
+                        <path d="M6.857 13.313A6.457 6.457 0 106.857.4a6.457 6.457 0 000 12.913zm4.29-2.169l4.571 4.571"></path>
+                      </g>
+                      <defs>
+                        <clippath id="clip0_114_1946">
+                          <path fill="#fff" d="M0 0h16v16H0z"></path>
+                        </clippath>
+                      </defs>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="align-items-center"><a class="align-items-center midbar_action mr-16" href="https://medicalmega.com/myaccount.html"><img class="mr-8" src="https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/user.svg" alt="icon account"><span>Account</span></a><a class="align-items-center midbar_action" href="https://medicalmega.com/cart.html"><img class="mr-8" src="https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/cart.svg" alt="icon Cart"><span>Cart (<span class="cart_count">0</span>)</span></a></div>
+            </div>
+          </div>
+        </div>
+        <form class="advanced-search" data-item="advanced-search">
+          <div class="container flex-center-between">
+            <p class="fs-14 c-gray">Advanced Search</p>
+            <div class="d-flex">
+              <input type="text" placeholder="Enter Item #" name="search_item">
+              <input type="text" placeholder="Enter Keyword" name="search_keyword">
+              <div class="select select_category" name="search_c_id">
+                <p class="select_current"><span>Select Category</span></p>
+                <ul class="select_dropdown">
+                  <li class="select_option active">Select Category</li>
+                  <li class="select_option">New Products!</li>
+                </ul>
+              </div>
+              <div class="select select_brand" name="search_m_id">
+                <p class="select_current"><span>Select Manufacturer</span></p>
+                <ul class="select_dropdown right">
+                  <li class="select_option active">Select Manufacturer</li>
+                  <li class="select_option">21st century nutritional products</li>
+                </ul>
+              </div>
+              <button class="btn btn_dark" type="submit">Submit</button>
+            </div>
+            <button class="btn_reset" type="reset" data-close="advanced-search"></button>
+          </div>
+        </form>
+        <div class="subbar">
+          <div class="container flex-center-between">
+            <nav class="nav_category"><a class="align-items-center" href="#"><img class="burger_category" src="https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/burger.svg" alt="icon burger"><span class="p-main">All Categories</span></a></nav>
+            <ul class="d-flex category_popular">
+              <li><a href="/category/new-products">New Products</a></li>
+              <li><a href="/sales.html">Sale Products</a></li>
+              <li><a href="/category/hand-sanitizing">Hand Sanitizing</a></li>
+              <li><a href="/category/wound-care">Wound care</a></li>
+              <li><a href="/category/gloves">Gloves</a></li>
+              <li><a href="/category/disinfectants">Disinfectants</a></li>
+              <li><a href="/category/ostomy">Ostomy</a></li>
+              <li><a href="/category/instruments">Instruments</a></li>
+            </ul>
+            <p class="previous-version">switch to the previous version</p>
+          </div>
+        </div>
+        <button class="burger" id="burger" type="button"><span class="burger-line burger-line-top"></span><span class="burger-line burger-line-center"></span><span class="burger-line burger-line-bottom"></span></button>
+      </header>
+      <div class="container"> 
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="href">Home </a>
+          </li>
+          <li class="breadcrumbs__item"><span class="breadcrumbs__text"> &gt; Hand Sanitizing</span>
+          </li>
+        </ul>
+        <div class="flex-wrap w-100">
+          <div class="filter">
+            <h3 class="filter_title">Filters</h3>
+            <div class="select_filter active">
+              <div class="select_item">
+                <p>Brands</p>
+              </div>
+              <div class="select_drop">
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">Ansell<span class="count_brand">(2)</span></span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">Cardinal Health<span class="count_brand">(2)</span></span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">DRE HEALTH<span class="count_brand">(2)</span></span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">Dynarex<span class="count_brand">(2)</span></span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">Genairex<span class="count_brand">(2)</span></span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">Halyard health<span class="count_brand">(2)</span></span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">Omni<span class="count_brand">(2)</span></span>
+                </label>
+              </div>
+            </div>
+            <div class="select_filter active">
+              <div class="select_item">
+                <p>Price</p>
+              </div>
+              <div class="select_drop">
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">0 - 20</span><span class="count_brand">(16)</span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">21 - 40</span><span class="count_brand">(16)</span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">61 - 80</span><span class="count_brand">(16)</span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">81 - 100</span><span class="count_brand">(16)</span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">100 - 200</span><span class="count_brand">(16)</span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">200 400</span><span class="count_brand">(16)</span>
+                </label>
+                <label class="mt-16 align-items-center">
+                  <input class="checkbox" type="checkbox"><span class="check"></span><span class="check_text">&gt; 400</span><span class="count_brand">(16)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="listing_wrapper">
+            <h2 class="listing_title">Hand Sanitizing</h2>
+            <div class="flex-end-between">
+              <p class="c-gray">26 items</p>
+              <div class="align-items-center">
+                <p class="fs-14 mr-16">Sort by</p>
+                <div class="select select_sort">
+                  <div class="select_current"><span>by default</span></div>
+                  <ul class="select_dropdown">
+                    <li class="select_option active">by default</li>
+                    <li class="select_option" data-value="Featured">Featured</li>
+                    <li class="select_option" data-value="Featured 1">Featured 1</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex-wrap listing_content">
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card">
+                <p class="status">Out of Stock</p><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_white" type="button" data-button="notify"><span>notify when available</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+              <div class="card"><a class="card_name" href="#"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150"><span>Ansel Latex Exam Gloves, Medium Box of 150</span></a>
+                <div>
+                  <div class="flex-center-center calc">
+                    <button class="btn-calc btn-calc_minus" type="button" disabled></button>
+                    <input class="calc-qty" type="number" value="1">
+                    <button class="btn-calc btn-calc_plus" type="button"></button>
+                  </div>
+                  <button class="btn btn_dark" type="button"><span>$150.00 | Add to Cart</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" data-item="notify">
+      <form class="popup_container">
+        <button class="btn_reset" type="reset" data-close="notify"></button>
+        <h3 class="title">Leave Your e-mail to be Notified when it’s Available</h3>
+        <div class="flex-center-center"><img src="https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg" alt="Ansel Latex Exam Gloves, Medium Box of 150">
+          <div class="max-391 ml-40">
+            <input type="email" placeholder="Your e-mail" required>
+            <button class="btn btn_red" type="submit">notify me</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script type="application/javascript" src="https://medicalmega.com/js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
