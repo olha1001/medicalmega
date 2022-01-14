@@ -81,3 +81,44 @@ slidesNav.forEach((el,i) => {
         document.querySelector('.img-zoom-result').style.backgroundImage = `url("${src}")`
     })
 })
+
+
+//select
+document.querySelectorAll('.select_current').forEach((el) => {
+    el.addEventListener('click',() => {
+        el.closest('.select').classList.toggle('active');
+    })
+    el.nextElementSibling.querySelectorAll('.select_option').forEach( (option, index) => {
+        option.addEventListener('click', (e) => {
+            let name = option.closest('.select').getAttribute('name');
+
+            if (option.closest('.select').querySelector('.active') != null) {
+                option.closest('.select').querySelector('.active').classList.remove('active');
+            }
+            option.classList.add('active');
+
+            if (name == 'search_c_id') {
+                document.querySelector('#search_c_id').selectedIndex = index;
+            } else if (name == 'search_m_id') {
+                document.querySelector('#search_m_id').selectedIndex = index;
+            }
+            if (index == 0) {
+                el.querySelector('span').innerHTML = option.innerHTML;
+            } else {
+                el.innerHTML = option.innerHTML;
+            }
+            document.querySelectorAll('.select').forEach(el => {
+                el.classList.remove('active')
+            })
+        })
+    })
+})
+
+document.body.addEventListener('click', (e) => {
+    if (e.target.className != 'select_current') {
+        document.querySelectorAll('.select').forEach(el => {
+            el.classList.remove('active')
+        })
+    }
+})
+
