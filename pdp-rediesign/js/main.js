@@ -90,18 +90,10 @@ document.querySelectorAll('.select_current').forEach((el) => {
     })
     el.nextElementSibling.querySelectorAll('.select_option').forEach( (option, index) => {
         option.addEventListener('click', (e) => {
-            let name = option.closest('.select').getAttribute('name');
+            option.closest('.select').querySelector('.active').classList.remove('active');
 
-            if (option.closest('.select').querySelector('.active') != null) {
-                option.closest('.select').querySelector('.active').classList.remove('active');
-            }
             option.classList.add('active');
 
-            if (name == 'search_c_id') {
-                document.querySelector('#search_c_id').selectedIndex = index;
-            } else if (name == 'search_m_id') {
-                document.querySelector('#search_m_id').selectedIndex = index;
-            }
             if (index == 0) {
                 el.innerHTML = `<span>${option.innerHTML}</span>`;
             } else {
@@ -118,3 +110,7 @@ document.body.addEventListener('click', (e) => {
         })
     }
 })
+
+//range
+let subtotal = +document.querySelector('#order-pr').innerText;
+document.querySelector('.range_slider span').style.width = subtotal * 100 / 150 + '%';
