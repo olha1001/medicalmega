@@ -23,6 +23,11 @@ function changeQty(qty,pr,action) {
         qty.value = 1;
     }
     pr.innerHTML= (+pr.dataset.price * +qty.value).toFixed(2)
+    if (qty.closest('.product_sidebar') && qty.value > 1) {
+        document.querySelector('.product_sidebar .add-cart span').hidden = false;
+    } else {
+        document.querySelector('.product_sidebar .add-cart span').hidden = true;
+    }
 }
 
 //+/- btns quantity
@@ -81,12 +86,19 @@ slidesNav.forEach((el,i) => {
 })
 
 //select
+function remActiveSelect() {
+    let dropdowns = document.querySelectorAll(".select");
+    for (let i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].classList.contains('active')) {
+            dropdowns[i].classList.remove('active');
+        }
+    }
+}
+
 document.querySelectorAll('.select_current').forEach((el) => {
     el.addEventListener('click',() => {
-        document.querySelectorAll('.select').forEach(selects => {
-            selects.classList.remove('active')
-        })
-        el.closest('.select').classList.toggle('active');
+        remActiveSelect();
+        el.parentElement.classList.toggle('active');
     })
     el.nextElementSibling.querySelectorAll('.select_option').forEach( (option, index) => {
         option.addEventListener('click', (e) => {
@@ -103,12 +115,9 @@ document.querySelectorAll('.select_current').forEach((el) => {
     })
 })
 
-function remActiveSelect() {
-    document.querySelectorAll('.select').forEach(el => el.classList.remove('active'))
-}
 
 document.body.addEventListener('click', (e) => {
-    if (e.target.className != 'select_current') {
+    if (e.target.matches('.select_current')) {
         remActiveSelect()
     }
 })
