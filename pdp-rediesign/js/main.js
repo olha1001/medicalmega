@@ -96,7 +96,7 @@ function remActiveSelect() {
 }
 
 document.querySelectorAll('.select_current').forEach((el) => {
-    el.addEventListener('click',() => {
+    el.addEventListener('click', (e) => {
        e.stopImmediatePropagation();
         remActiveSelect();
         el.parentElement.classList.toggle('active');
