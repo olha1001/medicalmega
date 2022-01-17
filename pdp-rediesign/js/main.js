@@ -119,7 +119,7 @@ document.querySelectorAll('.select_current').forEach((el) => {
 
 
 document.body.addEventListener('click', (e) => {
-    if (e.target.matches('.select_current')) remActiveSelect()
+    if (!e.target.matches('.select_current')) remActiveSelect();
 })
 
 window.addEventListener('scroll', () => remActiveSelect())
