@@ -116,12 +116,12 @@ input {
   border: 2px solid #1E3944;
   border-radius: 40px;
   color: #FBFBFB;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   line-height: 44px;
-  font-size: 14px;
+  font-size: 12px;
   padding: 0 21px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
@@ -503,7 +503,6 @@ input {
     text-align: center;
     margin-right: 20px; }
   .advanced-search .btn {
-    font-weight: 600;
     line-height: 28px;
     margin-left: 20px;
     font-size: 10px; }
@@ -546,8 +545,7 @@ input {
       height: 150px; }
     .listing_content .card .btn {
       font-size: 10px;
-      line-height: 36px;
-      font-weight: 600; }
+      line-height: 36px; }
   .listing_content .card_name {
     font-size: 12px;
     line-height: 130%; }
@@ -704,24 +702,22 @@ input {
     line-height: 170%; }
 
 .product_sidebar {
-  min-height: 360px;
+  min-height: 381px;
   background: #F0F1F2;
   border: 1px solid #E3E6E7;
   -webkit-box-shadow: 0 2px 4px rgba(9, 17, 20, 0.1), 0px 12px 32px rgba(0, 0, 0, 0.05);
   box-shadow: 0 2px 4px rgba(9, 17, 20, 0.1), 0px 12px 32px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   width: 280px;
-  padding: 20px 40px;
+  padding: 50px 40px 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: sticky;
   margin-bottom: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   top: 250px; }
   .product_sidebar .btn {
+    padding: 0;
     width: 100%; }
 
 .product_content {
@@ -745,7 +741,7 @@ input {
   margin: 12px 0; }
 
 .total {
-  padding: 14px 0;
+  padding: 10px 0;
   margin-bottom: 25px; }
 
 .calc {
