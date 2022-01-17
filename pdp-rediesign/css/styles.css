@@ -733,7 +733,9 @@ input {
     line-height: 120%;
     margin-bottom: 24px; }
   .product_content .col_mid {
-    width: 416px; }
+      padding-right: 10px;
+      width: calc(100% - 280px);
+      max-width: 426px;}
 
 .line {
   background: #BCC4C7;
@@ -815,6 +817,7 @@ input {
     border-bottom: 1px solid #344D57;
     padding: 4px 0; }
     .content-discription table td:first-child {
+      color: #091114;
       width: 40%;
       padding-right: 10px;
       word-break: break-word; }
