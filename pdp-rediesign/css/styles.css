@@ -709,12 +709,14 @@ input {
   box-shadow: 0 2px 4px rgba(9, 17, 20, 0.1), 0px 12px 32px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   width: 280px;
-  padding: 50px 40px 0;
+  padding: 50px 40px 40px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: sticky;
-  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   top: 250px; }
   .product_sidebar .btn {
     padding: 0;
