@@ -97,7 +97,9 @@ function remActiveSelect() {
 
 document.querySelectorAll('.select_current').forEach((el) => {
     el.addEventListener('click',() => {
-        remActiveSelect();
+        document.querySelectorAll('.select').forEach(selects => {
+            selects.classList.remove('active')
+        })
         el.parentElement.classList.toggle('active');
     })
     el.nextElementSibling.querySelectorAll('.select_option').forEach( (option, index) => {
