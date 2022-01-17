@@ -97,13 +97,13 @@ function remActiveSelect() {
 
 document.querySelectorAll('.select_current').forEach((el) => {
     el.addEventListener('click',() => {
-        document.querySelectorAll('.select').forEach(selects => {
-            selects.classList.remove('active')
-        })
+       e.stopImmediatePropagation();
+        remActiveSelect();
         el.parentElement.classList.toggle('active');
     })
     el.nextElementSibling.querySelectorAll('.select_option').forEach( (option, index) => {
         option.addEventListener('click', (e) => {
+            e.stopImmediatePropagation()
             option.closest('.select').querySelector('.active').classList.remove('active');
 
             option.classList.add('active');
@@ -119,14 +119,10 @@ document.querySelectorAll('.select_current').forEach((el) => {
 
 
 document.body.addEventListener('click', (e) => {
-    if (e.target.matches('.select_current')) {
-        remActiveSelect()
-    }
+    if (e.target.matches('.select_current')) remActiveSelect()
 })
 
-window.addEventListener('scroll', () => {
-    remActiveSelect()
-})
+window.addEventListener('scroll', () => remActiveSelect())
 
 //range
 if (document.querySelector('#order-pr')) {
