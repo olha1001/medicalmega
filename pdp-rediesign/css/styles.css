@@ -204,7 +204,10 @@ input {
   display: none; }
   .checkbox:checked ~ .check:before {
     content: ''; }
-
+  .checkbox:checked ~ .radio-check {
+      border-color: #96280F; }
+    .checkbox:checked ~ .radio-check .radio-check_price{
+      color: #96280F;}
 .select {
   position: relative;
   z-index: 6; }
