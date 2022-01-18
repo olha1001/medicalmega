@@ -746,6 +746,13 @@ input {
       width: calc(100% - 280px);
       max-width: 426px;}
 
+  .out-of-stick {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 14px;
+    line-height: 150%;
+    color: #96280F!important;}
 .line {
   background: #DCE0E1;
   width: 100%;
