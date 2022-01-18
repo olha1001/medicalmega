@@ -636,7 +636,7 @@ input {
 .col_left {
   width: 456px;
   position: sticky;
-  top: 205px;
+  top: 200px;
   margin-top: 14px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -728,7 +728,7 @@ input {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  top: 255px; }
+  top: 250px; }
   .product_sidebar .btn {
     padding: 0;
     width: 100%; }
