@@ -918,7 +918,26 @@ input {
 .product {
   padding-top: 17px;
   padding-bottom: 60px; }
-
+ .radio-check {
+    background: #FBFBFB;
+    border: 1px solid #E0E4E5;
+    border-radius: 2px;
+    display: block;
+    padding: 11px 0;}
+  .radio-check span {
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: #344D57;
+    display: block;
+  }
+  .radio-check span.radio-check_price {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: #091114;
+    margin-top: 8px;
+  }
 .popup {
   position: fixed;
   left: 0;
