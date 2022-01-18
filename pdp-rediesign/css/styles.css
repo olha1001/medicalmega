@@ -498,7 +498,7 @@ input {
   pointer-events: none; }
   .advanced-search.active {
     padding: 16px 0;
-    height: 60px;
+    height: 64px;
     opacity: 1;
     pointer-events: auto; }
   .advanced-search input {
