@@ -134,3 +134,22 @@ if (document.querySelector('#order-pr')) {
 document.querySelectorAll('.select_filter').forEach(el => {
     el.querySelector('.select_item').addEventListener('click', () => el.classList.toggle('active'))
 })
+
+// radio buttons
+document.querySelectorAll('.available-options .checkbox').forEach((checkbox, index) => {
+    checkbox.addEventListener('click', (e) => {
+      if (checkbox.checked) {
+        let optionAvailable = checkbox.nextElementSibling.querySelectorAll('span')[0],
+        optionPrice = checkbox.nextElementSibling.querySelector('.radio-check_price').innerHTML.replace('$',''),
+        caseCount = 1;
+        if (optionAvailable.innerText.includes('Each')) {
+          caseCount = 1;
+        } else {
+          caseCount = optionAvailable.innerText.replace(/\D/g, '')
+        }
+        document.querySelector('.product_sidebar .calc-qty').dataset.case = caseCount;
+        document.querySelector('.product_sidebar .add-cart .pr').dataset.price = optionPrice;
+        document.querySelector('.product_sidebar .add-cart .pr').innerHTML = (+optionPrice * +document.querySelector('.product_sidebar .calc-qty').value).toFixed(2);
+      }
+    })
+})
