@@ -1,0 +1,156 @@
+extends layout/main
+
+block variables
+	-var title = 'pdp'
+
+block content
+	.main
+		include modules/header/header
+		.container 
+			ul.breadcrumbs
+				+breadcrumbs-item('Home ','href')
+				+breadcrumbs-item(' > Hand Sanitizing','href')
+				+breadcrumbs-item(' > Face Mask, 3 Ply, Ear Loop Box of 50')
+			.flex-wrap.w-100.justify-content-between.product  
+				.col_left.flex-wrap 
+					.side_one
+						.slider-nav
+							.slide.active
+								img(src='https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg' alt='image 1')
+							.slide
+								img(src='https://medicalmegaimgs.net/prod/uploaded/product/15936422447741235045efd0d04e7bc0.jpg' alt='image 2')
+						.trustpilot trustpilot
+					
+					.side_two
+						.slider-for
+							.slide(data-item="show-zoom")
+								img.slider-for_img#forImg(src='https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg' alt='image 2')
+								.img-zoom-result#zoomResult
+
+						p.text-small.text-center Image shown for reference purposes only. Actual product appearance may vary.
+				.col_right 
+					.range 
+						.flex-center-between
+							p 
+								span.c-gray Your Order: 
+								| $
+								span#order-pr 15.00
+							p.text-up 
+								span.c-red.fw-semi $
+									span#last-pr 135.00 
+								| left for free shipping
+						.range_slider
+							span
+					.product_content.justify-content-between 
+						.col_mid
+							h2.title Face Mask, 3 Ply, Ear Loop Box 
+								span.text-nowrap of 50
+							ul.list 
+								li 
+									| Sold By: 
+									span.fw-semi Box of 50
+								li 
+									| Item Number: 
+									span.fw-semi MK-3PL
+								li 
+									| Manufacturer: 
+									span.fw-semi Generica
+							ul.tabs-discription.d-flex
+								li.active Product details
+								li Product composition
+								li Shipping details
+							.content-discription
+								.content-item.active 
+									p 70% Alcohol with Aloe Hand Sanitizer, Citrus Fragrance, 4oz.
+									p This waterless formula allows use everywhere, anytime. Clinical studies performed by independent laboratories using FDA recommended study (test) guidelines concluded that Hydrox Waterless Instant Hand Sanitizers demonstrate rapid kill times:
+									p On a broad range of gram-negative and gram-positive bacteria.
+									p On Antibiotic-resistant organisms.
+									p Ethyl alcohol's exceptional cidal activity has led to its recognition as the most effective agent available for a waterless hand sanitizer.
+								.content-item 2
+								.content-item 3
+						.product_sidebar
+							.product_sidebar_top
+								.shipping_block
+									.align-items-center 
+										img.mr-16.icon-car(src='img/common/car.svg' alt='icon shipping')
+										div 
+											p.c-red.text-up.fw-semi.l-t-02 Estimated shipping
+											p.c-gray 2-3 business days*
+									.line
+								.available-options
+									p.fs-14.fw-semi Available Options: 
+									.justify-content-between
+										label
+											input.checkbox(type='radio' name='radio' checked)
+											span.radio-check
+												span Each
+												span.radio-check_price $15.26
+										label
+											input.checkbox(type='radio' name='radio')
+											span.radio-check
+												span Pack of 12
+												span.radio-check_price $95.00
+							div
+								.flex-center-center.calc 
+									button.btn-calc.btn-calc_minus(type="button" disabled)
+									input.calc-qty(type="number" value="1" data-case="1")
+									button.btn-calc.btn-calc_plus(type="button")
+								button.btn.btn.btn_dark.add-cart(type="button" data-variant="" data-id="") 
+									span(hidden) $
+										span.pr(data-price="15.26") 15.26
+										|  |  
+									| Add to Cart
+			section.similar-products
+				h2.text-center Similar Products
+				.justify-content-between 
+					- 
+						var cards = [
+							{
+								image_url: 'https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg',
+								name: 'Procedure Surgical Face Mask, 3 Ply, Ear Loop, Blue',
+								price: '15.95'
+							},
+							
+							{
+								image_url: 'https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg',
+								name: '3M Particulate Respirator Mask',
+								price: '15.95'
+							},
+							
+							{
+								image_url: 'https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg',
+								name: 'Hand Sanitizer, 70% Alcohol with Aloe , Citrus Fragrance, 4oz',
+								price: '2.75'
+							},
+							
+							{
+								image_url: 'https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg',
+								name: 'Ansel Latex Exam Gloves, Medium Box of 150',
+								price: '150.00'
+							}
+						]
+					each val in cards
+						.card
+							a.card_name(href="#")
+								img(src=val.image_url alt=val.name)
+								span=val.name
+							div
+								.flex-center-center.calc 
+									button.btn-calc.btn-calc_minus(type="button" disabled)
+									input.calc-qty(type="number" value="1")
+									button.btn-calc.btn-calc_plus(type="button")
+								button.btn.btn_dark.add-cart(type="button")
+									span $
+										span.pr(data-price=val.price)=val.price 
+										|  | Add to Cart
+	.popup(data-item="notify")
+		form.popup_container
+			button.btn_reset(type="reset" data-close="notify")
+			h3.title Leave Your e-mail to be Notified when it’s Available
+			.flex-center-center
+				img(src='https://medicalmegaimgs.net/prod/uploaded/product/159907855915375725325f50009f9b40e.jpg' alt='Ansel Latex Exam Gloves, Medium Box of 150')
+				.max-391.ml-40
+					input(type='email' placeholder='Your e-mail' required)
+					button.btn(type='submit') notify me
+	script(src="js/zoom.js")
+	script imageZoom("forImg", "zoomResult")
