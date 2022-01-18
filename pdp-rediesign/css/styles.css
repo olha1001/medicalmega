@@ -762,7 +762,21 @@ input {
       padding-right: 10px;
       width: calc(100% - 280px);
       max-width: 426px;}
-
+  .product_sidebar.disabled .product_sidebar_top, .product_sidebar.disabled .calc {
+    pointer-events: none;}
+  .product_sidebar.disabled p {
+    color: #9AA6AB; }
+  .product_sidebar.disabled .radio-check {
+    border-color: #E3E6E7; }
+  .product_sidebar.disabled .radio-check span {
+    color: #BCC4C7!important; }
+  .product_sidebar.disabled .calc-qty {
+    border-color: #E3E6E7;
+    color: #BCC4C7; }
+  .available-options .justify-content-between label {
+    width: 48%; }
+  .available-options .fs-14 {
+    margin: 15px 0 5px; }
   .out-of-stick {
     position: absolute;
     top: 16px;
