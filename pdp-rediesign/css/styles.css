@@ -397,8 +397,6 @@ input {
     display: inline-flex;
     border-radius: 50%;
     background-color: #1E3944;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     cursor: pointer; }
     .form-search button svg {
