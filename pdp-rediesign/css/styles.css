@@ -772,7 +772,13 @@ input {
     border-color: #E3E6E7;
     color: #BCC4C7; }
   .available-options .justify-content-between label {
-    width: 48%; }
+     position: relative;
+    z-index: 1;
+    min-width: 95px;
+    margin: 0 4px;
+    width: 48%;  }
+.available-options .justify-content-between label:last-child {
+        margin-right: 0; }
   .available-options .fs-14 {
     margin: 15px 0 5px; }
   .out-of-stick {
@@ -954,6 +960,23 @@ input {
     color: #091114;
     margin-top: 8px;
   }
+.arrow_buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;} 
+  .arrow_button {
+    cursor: pointer; }
+  .arrow_button[disabled] svg path{
+     fill: #BCC4C7;}
+  .arrow_button_prev {
+    margin-left: -26px; }
+  .arrow_button_next {
+    margin-right: -26px;}
 .popup {
   position: fixed;
   left: 0;
@@ -1132,3 +1155,12 @@ input {
 .max-391 {
   width: 100%;
   max-width: 391px; }
+
+
+.scroll-x {
+    overflow-x: auto;}
+.scroll-x::-webkit-scrollbar {
+  display: none; }
+.tns-outer {
+  margin-left: -4px;
+  margin-right: -4px; }
