@@ -468,8 +468,6 @@ input {
   .nav_category:hover .dropdown_categories {
     opacity: 1;
     pointer-events: auto; }
-.nav_category a {
-  padding: 13px 10px 13px 8px; }
 
 .nav_category .p-main {
   font-weight: 600;
