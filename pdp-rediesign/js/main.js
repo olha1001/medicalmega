@@ -8,7 +8,10 @@ let btnPlus = document.querySelectorAll('.btn-calc_plus'), //btn +
     closeBtn = document.querySelectorAll('[data-close]'), //btn close for hide popup or block
     slidesNav = document.querySelectorAll('.slider-nav .slide'), //slides navigation
     slidesFor = document.querySelectorAll('.slider-for .slide'), //slider main
-    price = document.querySelectorAll('.pr'); //price
+    price = document.querySelectorAll('.pr'), //price
+    alphabet = document.querySelectorAll('.alphabet li'), //alphabets
+    listCategories = document.querySelectorAll('.list_categories ul'); //list categories
+
 
 function changeQty(qty,pr,action) {
     if (action == 'plus') {
@@ -37,15 +40,20 @@ calc.forEach((el, i) => {
     inputQty[i].addEventListener('input', () => changeQty(inputQty[i], price[i]))
 })
 
-//descriptions
-for (let i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener('click', () => {
-        tabs[i].closest('.tabs-discription').querySelector('.active').classList.remove('active');
-        contents[i].closest('.content-discription').querySelector('.active').classList.remove('active');
-        tabs[i].classList.add('active');
-        contents[i].classList.add('active');
-    })
+//change Class active
+function toggleClass(item,content) {
+    for (let i = 0; i < item.length; i++) {
+        item[i].addEventListener('click', () => {
+            item[i].parentElement.querySelector('.active').classList.remove('active');
+            content[i].parentElement.querySelector('.active').classList.remove('active');
+            item[i].classList.add('active');
+            content[i].classList.add('active');
+        })
+    }
 }
+
+toggleClass(tabs,contents) //descriptions
+toggleClass(alphabet,listCategories) //all categories 
 
 function toggleActive(getData, action) {
     if (document.querySelector(`[data-item=${getData}]`)) {
