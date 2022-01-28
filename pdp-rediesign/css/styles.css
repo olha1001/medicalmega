@@ -408,19 +408,15 @@ input {
   border-top: 1px solid #BCC4C7;
   padding: 9px 0; }
 
-.select_category {
+.all_category {
   padding: 13px 10px 13px 8px;
   border-radius: 100px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 .dropdown_categories {
   position: absolute;
   top: 99%;
   left: -100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: calc(1% + 9px);
   opacity: 0;
