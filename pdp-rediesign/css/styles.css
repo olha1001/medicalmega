@@ -1218,3 +1218,5 @@ input {
 .tns-outer {
   margin-left: -4px;
   margin-right: -4px; }
+ .tns-outer .scroll-x {
+    margin-left: 0!important;}
