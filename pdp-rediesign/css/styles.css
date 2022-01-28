@@ -459,7 +459,7 @@ input {
 
 .nav_category {
   position: relative; }
-  .nav_category:hover .select_category {
+  .nav_category:hover .all_category {
     background: #E9EBEC; }
   .nav_category:hover .dropdown_categories {
     opacity: 1;
