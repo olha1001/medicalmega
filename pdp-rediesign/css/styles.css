@@ -423,24 +423,32 @@ input {
   pointer-events: none; }
 
 .alphabet {
-  padding: 20px 0;
+  height: calc(100vh - 188px);
+  overflow-y: auto;
+  padding: 16px 0;
   min-width: 61px;
   background: #FFFFFF;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   border: 1px solid #E3E6E7; }
   .alphabet li {
     font-size: 12px;
-    line-height: 29px;
+    line-height: 18px;
     text-align: center;
     color: #6d7e85;
-    margin-bottom: 3px;
+    margin: 4px 0;
     text-transform: uppercase;
     cursor: pointer; }
     .alphabet li.active {
       color: #96280F;
+      line-height: 29px;
       font-weight: 600;
       font-size: 24px; }
 
 .list_categories {
+  height: calc(100vh - 188px);
+  overflow-y: auto;
   padding: 20px 40px;
   width: 327px;
   background: #FBFBFB; }
