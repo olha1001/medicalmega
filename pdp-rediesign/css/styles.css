@@ -214,6 +214,7 @@ input {
   .select.select_sort {
     min-width: 170px; }
     .select.select_sort .select_current {
+          cursor: pointer;
       background-color: #FBFBFB;
       line-height: 38px;
       font-size: 14px; }
