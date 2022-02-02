@@ -41,9 +41,9 @@ calc.forEach((el, i) => {
 })
 
 //change Class active
-function toggleClass(item,content) {
+function toggleClass(item,content,event) {
     for (let i = 0; i < item.length; i++) {
-        item[i].addEventListener('click', () => {
+        item[i].addEventListener(event, () => {
             item[i].parentElement.querySelector('.active').classList.remove('active');
             content[i].parentElement.querySelector('.active').classList.remove('active');
             item[i].classList.add('active');
@@ -52,8 +52,8 @@ function toggleClass(item,content) {
     }
 }
 
-toggleClass(tabs,contents) //descriptions
-toggleClass(alphabet,listCategories) //all categories 
+toggleClass(tabs,contents,'click') //descriptions
+toggleClass(alphabet,listCategories,'mouseover') //all categories 
 
 function toggleActive(getData, action) {
     if (document.querySelector(`[data-item=${getData}]`)) {
