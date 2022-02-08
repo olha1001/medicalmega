@@ -55,19 +55,19 @@ function toggleClass(item,content,event) {
 toggleClass(tabs,contents,'click') //descriptions
 toggleClass(alphabet,listCategories,'mouseover') //all categories 
 
-function toggleActive(getData, action) {
+function toggleActive(getData) {
     if (document.querySelector(`[data-item=${getData}]`)) {
-        if (action == true) {
-            document.querySelector(`[data-item=${getData}]`).classList.add('active')
-        } else {
-            document.querySelector(`[data-item=${getData}]`).classList.remove('active')
+        document.querySelector(`[data-item=${getData}]`).classList.toggle('active')
+        if (getData == 'advanced-search') {
+            document.querySelector(`[data-button=${getData}]`).classList.toggle('active')
+            document.querySelector(`.nav_category`).classList.remove('active')
         }
     }
 }
 
 for (let i = 0; i < dataButton.length; i++) {
-    dataButton[i].addEventListener('click', () => toggleActive(dataButton[i].getAttribute('data-button'),true))
-    closeBtn[i].addEventListener('click', () => toggleActive(closeBtn[i].getAttribute('data-close'),false))
+    dataButton[i].addEventListener('click', () => toggleActive(dataButton[i].getAttribute('data-button')))
+    closeBtn[i].addEventListener('click', () => toggleActive(closeBtn[i].getAttribute('data-close')))
 }
 
 slidesFor.forEach((el) => {
