@@ -52,7 +52,10 @@ a {
 
 body {
   font-size: 12px;
-  border-top: 0; }
+  border-top: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;}
 
 button {
   border: none;
