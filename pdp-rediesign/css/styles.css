@@ -171,25 +171,44 @@ input {
       border-color: #F0F1F2;
       background-color: #FBFBFB;
       color: #9AA6AB; }
+
 .check {
-  border: 1px solid #091114;
-  width: 18px;
-  height: 18px;
-  border-radius: 3px;
+  border: 1px solid #6D7E85;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
   display: block;
-  margin-right: 15px; }
-  .check_text {
-    font-size: 14px;
-    line-height: 18px; }
+  margin-right: 8px;
+  position: relative; }
+  .check:before {
+    content: none;
+    width: 8px;
+    height: 8px;
+    background: #091114;
+    border-radius: 1px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.check_text {
+  font-size: 14px;
+  line-height: 150%; }
 
 .checkbox {
   display: none; }
-  .checkbox:checked ~ .check {
-    background: url("https://olha1001.github.io/medicalmega/pdp-rediesign/img/common/check.svg") no-repeat center/18px; }
+  .checkbox:checked ~ .check:before {
+    content: ''; }
   .checkbox:checked ~ .radio-check {
     border-color: #96280F; }
   .checkbox:checked ~ .radio-check .radio-check_price{
     color: #96280F;}
+ .checkbox:disabled ~ .radio-check {
+    border-color: #E3E6E7; }
+    .checkbox:disabled ~ .radio-check span {
+      color: #BCC4C7; }
 .header {
   -webkit-box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
   box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
@@ -893,8 +912,8 @@ padding: 0;
   }
   .card img {
     border-radius: 2px;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     display: block;
     margin: 0 auto 16px; }
