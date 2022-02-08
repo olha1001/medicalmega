@@ -10,8 +10,8 @@ let btnPlus = document.querySelectorAll('.btn-calc_plus'), //btn +
     slidesFor = document.querySelectorAll('.slider-for .slide'), //slider main
     price = document.querySelectorAll('.pr'), //price
     alphabet = document.querySelectorAll('.alphabet li'), //alphabets
-    listCategories = document.querySelectorAll('.list_categories ul'); //list categories
-
+    listCategories = document.querySelectorAll('.list_categories ul'), //list categories
+    btnAllCategories = document.querySelector('.all_category');
 
 function changeQty(qty,pr,action) {
     if (action == 'plus') {
@@ -160,4 +160,11 @@ document.querySelectorAll('.available-options .checkbox').forEach((checkbox, ind
         document.querySelector('.product_sidebar .add-cart .pr').innerHTML = (+optionPrice * +document.querySelector('.product_sidebar .calc-qty').value).toFixed(2);
       }
     })
+})
+
+//all categories
+btnAllCategories.addEventListener('click', (e) => {
+    e.target.parentElement.classList.toggle('active');
+    document.querySelector('.advanced-search').classList.remove('active');
+    document.querySelector(`[data-button="advanced-search"]`).classList.remove('active');
 })
