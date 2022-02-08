@@ -1191,6 +1191,7 @@ padding: 0;
     pointer-events: auto; }
   .popup h3, .popup .title {
     font-weight: 600;
+    text-align: center;
     font-size: 24px;
     line-height: 120%;
     color: #091114;
