@@ -1146,6 +1146,64 @@ padding: 0;
   margin-left: -26px; }
 .arrow_button_next {
   margin-right: -26px;}
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 7;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 169px 10px 10px; }
+  .popup.active {
+    opacity: 1;
+    pointer-events: auto; }
+  .popup h3, .popup .title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    color: #091114;
+    margin-bottom: 40px; }
+  .popup .btn {
+    width: 100%;
+    margin-top: 28px; }
+  .popup .btn_reset {
+    margin-left: auto;
+    display: block;
+    margin-bottom: 20px; }
+
+.popup_container {
+  background: #FFFFFF;
+  border-radius: 8px;
+  max-width: 701px;
+  width: 100%;
+  padding: 16px;
+  min-height: 330px;
+  margin: auto; }
+  .popup_container img {
+    width: 150px;
+    height: 150px; }
+  .popup_container_container {
+    background: #FFFFFF;
+    border-radius: 8px;
+    max-width: 701px;
+    width: 100%;
+    padding: 16px;
+    min-height: 330px;
+    margin: auto; }
+    .popup_container_container img {
+      width: 150px;
+      height: 150px; }
+
   @media only screen and (min-width: 1750px) {
     .nav_category {
       position: relative; }
